@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('accepted_requests', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
+            $table->integer('count');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
         });

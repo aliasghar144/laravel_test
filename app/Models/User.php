@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -22,9 +21,11 @@ class User extends Authenticatable
         'password',
         'phone',
         'address',
-        'call',
         'name',
         'lastname',
+        'request',
+        'isactive',
+        'isadmin',
     ];
 
     /**
@@ -33,10 +34,10 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'request',
-        'isadmin',
         'password',
     ];
+
+
 
     /**
      * The attributes that should be cast.

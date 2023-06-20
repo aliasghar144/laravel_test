@@ -19,8 +19,9 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('lastname')->nullable();
             $table->boolean('request')->default(false);
+            $table->boolean('isactive')->default(false);
             $table->boolean('isadmin')->default(false);
-            $table->bigInteger('phone',)->unique();
+            $table->String('phone',)->unique();
             $table->double('lat')->nullable();
             $table->double('long')->nullable();
             $table->rememberToken();
